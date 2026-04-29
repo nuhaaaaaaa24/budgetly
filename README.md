@@ -179,6 +179,5 @@ The following features are planned and currently being developed:
 - [ ] Responsive mobile design
 
 ---
-## 📄 License
 
 © 2025 Nuha Rilwan. All rights reserved.

@@ -181,4 +181,4 @@ The following features are planned and currently being developed:
 ---
 ## 📄 License
 
-MIT
+© 2025 Nuha Rilwan. All rights reserved.

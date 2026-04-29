@@ -18,9 +18,9 @@ A full-stack personal finance tracker that helps you manage income, expenses, an
 - JSON Web Token (JWT)
 - bcrypt.js
 
-<!-- **Deployment**
+**Deployment**
 - Frontend → Vercel
-- Backend → Render -->
+- Backend → Render
 
 ---
 
@@ -150,19 +150,6 @@ budgetly/
 | POST | `/api/transactions` | Add a new transaction |
 | PUT | `/api/transactions/:id` | Edit a transaction |
 | DELETE | `/api/transactions/:id` | Delete a transaction |
-
----
-
-## 🌐 Deployment
-
-<!-- **Backend on Render**
-- Set environment variables (`MONGO_URI`, `JWT_SECRET`, `PORT`) in Render dashboard
-- Deploy from your GitHub repo
-
-**Frontend on Vercel**
-- Connect your GitHub repo to Vercel
-- Set the root directory to `frontend`
-- Vercel auto-detects Vite and deploys -->
 
 ---
 ## 🚧 Work in Progress

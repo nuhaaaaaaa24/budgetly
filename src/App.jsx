@@ -6,6 +6,8 @@ import AddExpense from "./components/AddExpense";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Transactions from "./pages/Transaction";
+import Analytics from "./pages/Analytics";
+import Budgets from "./pages/Budgets";
 
 
 function DashboardLayout({ expenses, addExpense }) {
@@ -68,7 +70,7 @@ function App() {
           headers: { Authorization: `Bearer ${token}` }
         });
         const data = await res.json();
-        setExpenses(data);
+        setExpenses(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error("Failed to fetch transactions", err);
       }
@@ -117,10 +119,22 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/" element={<DashboardLayout expenses={expenses} addExpense={addExpense} />} />
+      <Route path="/analytics" element={
+        <div className="min-h-screen bg-[#0f0f1a] text-white">
+          <Navbar />
+          <Analytics expenses={expenses} />
+        </div>
+      } />
       <Route path="/transactions" element={
         <div className="min-h-screen bg-[#0f0f1a] text-white">
           <Navbar />
           <Transactions expenses={expenses} deleteExpense={deleteExpense} editExpense={editExpense} addExpense={addExpense} />
+        </div>
+      } />
+      <Route path="/budgets" element={
+        <div className="min-h-screen bg-[#0f0f1a] text-white">
+          <Navbar />
+          <Budgets expenses={expenses} />
         </div>
       } />
     </Routes>

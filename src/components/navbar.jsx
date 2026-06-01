@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom'
 
 const navigation = [
   { name: 'Dashboard', href: '/', current: true },
-  { name: 'Transactions', href: '/Transactions', current: true },
-  { name: 'Analytics', href: '#', current: false },
-  { name: 'Budgets', href: '#', current: false },
+  { name: 'Transactions', href: '/transactions', current: true },
+  { name: 'Analytics', href: '/analytics', current: false },
+  { name: 'Budgets', href: '/budgets', current: false },
 ]
 
 function classNames(...classes) {
